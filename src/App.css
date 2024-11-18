@@ -24,8 +24,8 @@ button {
 .btn-primary:active,
 .btn-primary.active,
 .btn-primary:focus-visible {
-  background-color: #105652 !important; /* Replace #desiredColor with your preferred color */
-  border-color: #105652 !important;
+  background-color: #050d42 !important; /* Replace #desiredColor with your preferred color */
+  border-color: #050d42 !important;
   box-shadow: none !important; /* Removes the default blue shadow */
 }
 
@@ -140,7 +140,7 @@ h3 {
 }
 
 .add-user-btn {
-  background-color: #105652;
+  background-color: #050d42;
   color: #ffffff;
   border-radius: 5px;
   border: none !important;
@@ -148,33 +148,33 @@ h3 {
   font-size: 14px;
 }
 .manage-ticket-btn {
-  background-color: #105652 !important;
-  border-color: #105652 !important;
+  background-color: #050d42 !important;
+  border-color: #050d42 !important;
   justify-content: center !important;
   display: flex !important;
   width: auto;
   margin-right: 8px;
 }
 .manage-ticket-btn-2 {
-  background-color: #105652 !important;
-  border-color: #105652 !important;
+  background-color: #050d42 !important;
+  border-color: #050d42 !important;
   justify-content: center !important;
   display: flex !important;
   width: auto;
 }
 .manage-ticket-btn:hover {
-  background-color: #87a79e;
-  border-color: #87a79e;
+  background-color: #12194b;
+  border-color: #12194b;
   font-weight: 400;
 }
 .manage-ticket-btn-2:hover {
-  background-color: #87a79e;
-  border-color: #87a79e;
+  background-color: #12194b;
+  border-color: #12194b;
   font-weight: 400;
 }
 .add-user-btn:hover {
-  background-color: #87a79e;
-  border-color: #87a79e;
+  background-color: #12194b;
+  border-color: #12194b;
   font-weight: 400;
 }
 i {
@@ -184,7 +184,7 @@ i {
 }
 
 .submit-btn {
-  background-color: #105652;
+  background-color: #050d42;
   color: #ffffff;
   font-size: 14px;
   border: none;
@@ -196,8 +196,8 @@ i {
 }
 
 .submit-btn:hover {
-  background-color: #87a79e !important;
-  border-color: #87a79e !important;
+  background-color: #12194b !important;
+  border-color: #12194b !important;
   font-weight: 700 !important;
 }
 
@@ -379,7 +379,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 }
 
 .custom-profile-container .submit-btn {
-  background-color: #105652;
+  background-color: #050d42;
   color: #ffffff;
   font-size: 14px;
   border: none;
@@ -416,7 +416,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   padding-left: 0p;
 }
 .ticket-form {
-  background-color: #105652;
+  background-color: #050d42;
   margin-top: 1rem;
   border-radius: 3px;
   height: 690px;
@@ -861,37 +861,37 @@ input[type="date"] {
   background-color: #e0e0e0;
 }
 .upload-resource-btn {
-  background-color: #105652 !important;
-  border-color: #105652 !important;
+  background-color: #050d42 !important;
+  border-color: #050d42 !important;
   justify-content: center !important;
 }
 .upload-resource-btn:hover {
-  background-color: #87a79e !important;
-  border-color: #87a79e !important;
+  background-color: #12194b !important;
+  border-color: #12194b !important;
   font-weight: 600 !important;
 }
 .container .publish-btn {
-  background-color: #105652 !important;
-  border-color: #105652 !important;
+  background-color: #050d42 !important;
+  border-color: #050d42 !important;
   justify-content: center !important;
   margin-right: 0px;
   margin-top: -30px;
 }
 .publish-btn:hover {
-  background-color: #87a79e !important;
-  border-color: #87a79e !important;
+  background-color: #12194b !important;
+  border-color: #12194b !important;
   font-weight: 600 !important;
 }
 .container .publish-edit-btn {
-  background-color: #105652 !important;
-  border-color: #105652 !important;
+  background-color: #050d42 !important;
+  border-color: #050d42 !important;
   justify-content: center !important;
   margin-right: 0px;
   margin-top: -60px;
 }
 .publish-edit-btn:hover {
-  background-color: #87a79e !important;
-  border-color: #87a79e !important;
+  background-color: #12194b !important;
+  border-color: #12194b !important;
   font-weight: 600 !important;
 }
 .resources-container {
@@ -982,22 +982,22 @@ input[type="date"] {
   border-color: #efc7c2 !important;
 }
 .add-resource-btn {
-  background-color: #105652;
-  border-color: #105652;
+  background-color: #050d42;
+  border-color: #050d42;
   justify-content: center;
   display: flex;
   margin-right: -83px;
 }
 .edit-resource-btn {
-  background-color: #105652;
-  border-color: #105652;
+  background-color: #050d42;
+  border-color: #050d42;
   justify-content: center;
   display: flex;
   margin-top: -30px;
 }
 .edit-resource-btn:hover {
-  background-color: #87a79e !important;
-  border-color: #87a79e !important;
+  background-color: #12194b !important;
+  border-color: #12194b !important;
   font-weight: 600 !important;
 }
 .delete-resource-btn {
@@ -1011,8 +1011,8 @@ input[type="date"] {
   border-color: #efc7c2 !important;
 }
 .add-resource-btn:hover {
-  background-color: #87a79e !important;
-  border-color: #87a79e !important;
+  background-color: #12194b !important;
+  border-color: #12194b !important;
   font-weight: 600 !important;
 }
 /* .delete-resource-btn {
@@ -1076,7 +1076,7 @@ input[type="date"] {
   align-self: flex-start;
   margin-top: 0;
   margin-bottom: 20px;
-  color: #105652;
+  color: #050d42;
   margin-left: 85px;
 }
 
@@ -1653,8 +1653,8 @@ input[type="date"] {
     margin: 20px 0 0;
   }
   .container .publish-edit-btn {
-    background-color: #105652 !important;
-    border-color: #105652 !important;
+    background-color: #050d42 !important;
+    border-color: #050d42 !important;
     justify-content: center !important;
     margin-right: 0px;
     margin-top: -50px;
@@ -1687,8 +1687,8 @@ input[type="date"] {
 }
 @media (max-width: 1366px) and (min-width: 1025px) {
   .container .top-filter .add-resource-btn {
-    background-color: #105652;
-    border-color: #105652;
+    background-color: #050d42;
+    border-color: #050d42;
     justify-content: center;
     display: flex;
     margin-right: 0px;
@@ -1893,7 +1893,7 @@ input[type="date"] {
   }
 
   .generate-ticket-container .ticket-form {
-    background-color: #105652;
+    background-color: #050d42;
     margin-top: 4rem;
     border-radius: 3px;
     height: 650px !important;
@@ -2073,8 +2073,8 @@ input[type="date"] {
       max-width: 100%;
   }
   .add-resource-btn {
-    background-color: #105652;
-    border-color: #105652;
+    background-color: #050d42;
+    border-color: #050d42;
     justify-content: center;
     display: flex;
     margin-right: 0px;

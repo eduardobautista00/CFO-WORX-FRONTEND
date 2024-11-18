@@ -52,45 +52,45 @@ export const AdminSidebarData = [
     ),
     cName: "nav-text",
   },
-  {
-    title: '',
-    icon: (
-      <div style={{ display: 'flex', alignItems: 'center' }}>
-        <img className='navIcon' src={ticketing} alt="Custom Icon" style={{ width: '24px', height: '24px' }} />
-        <span style={{ marginLeft: '16px' }}>Ticketing</span>
-        <FiChevronDown style={{ marginLeft: '20px' }} />
-      </div>
-    ),
-    cName: 'nav-text',
-    submenu: [
-      {
-        title: "Generate Ticket",
-        path: "/generate-tickets",
-        icon: (
-          <img
-            className="navIcon"
-            src={generate_ticket}
-            alt="Custom Icon"
-            style={{ width: "24px", height: "24px" }}
-          />
-        ),
-        cName: "nav-text",
-      },
-      {
-        title: "Tickets History",
-        path: "/tickets-history",
-        icon: (
-          <img
-            className="navIcon"
-            src={tickets_history}
-            alt="Custom Icon"
-            style={{ width: "24px", height: "24px" }}
-          />
-        ),
-        cName: "nav-text",
-      },
-    ],
-  },
+  // {
+  //   title: '',
+  //   icon: (
+  //     <div style={{ display: 'flex', alignItems: 'center' }}>
+  //       <img className='navIcon' src={ticketing} alt="Custom Icon" style={{ width: '24px', height: '24px' }} />
+  //       <span style={{ marginLeft: '16px' }}>Ticketing</span>
+  //       <FiChevronDown style={{ marginLeft: '20px' }} />
+  //     </div>
+  //   ),
+  //   cName: 'nav-text',
+  //   submenu: [
+  //     {
+  //       title: "Generate Ticket",
+  //       path: "/generate-tickets",
+  //       icon: (
+  //         <img
+  //           className="navIcon"
+  //           src={generate_ticket}
+  //           alt="Custom Icon"
+  //           style={{ width: "24px", height: "24px" }}
+  //         />
+  //       ),
+  //       cName: "nav-text",
+  //     },
+  //     {
+  //       title: "Tickets History",
+  //       path: "/tickets-history",
+  //       icon: (
+  //         <img
+  //           className="navIcon"
+  //           src={tickets_history}
+  //           alt="Custom Icon"
+  //           style={{ width: "24px", height: "24px" }}
+  //         />
+  //       ),
+  //       cName: "nav-text",
+  //     },
+  //   ],
+  // },
   {
     title: "Branches",
     path: "/branches",
@@ -147,19 +147,7 @@ export const StaffSidebarData = [
     ),
     cName: "nav-text",
   },
-  {
-    title: "History",
-    path: "/history",
-    icon: (
-      <img
-        className="navIcon"
-        src={tickets_history}
-        alt="Custom Icon"
-        style={{ width: "24px", height: "24px" }}
-      />
-    ),
-    cName: "nav-text",
-  },
+  
   {
     title: "View Resources",
     path: "/resources-list",

@@ -16,8 +16,6 @@ import AddBranch from './components/AdminPages/Branches/AddBranch';
 import EditBranch from './components/AdminPages/Branches/EditBranch';
 import MyProfile from './components/AdminPages/MyProfile/MyProfile';
 import GenerateTickets from './components/StaffPages/GenerateTickets/GenerateTickets';
-import History from './components/StaffPages/History/History';
-import QueueList from './components/StaffPages/QueueList/QueueList';
 import ProtectedRoute from './components/PrivateRoute/PrivateRoute';
 import { AuthContextProvider } from './components/Authentication/authContext';
 import {getCookie} from './components/Authentication/getCookie';
@@ -79,8 +77,6 @@ const  isSegmentCorrect = (url , pathNameURL) => {
         <Route path="/add-branch" element={<ProtectedRoute element={<AddBranch />} allowedRoles={['Admin']} />} />
         <Route path="/edit-branch/:branchId" element={<ProtectedRoute element={<EditBranch />} allowedRoles={['Admin']} />} />
         <Route path="/generate-tickets" element={<ProtectedRoute element={<GenerateTickets />} allowedRoles={['Staff', 'Admin']} />} />
-        <Route path="/history" element={<ProtectedRoute element={<History />} allowedRoles={['Staff']} />} />
-        <Route path="/queue-list" element={<ProtectedRoute element={<QueueList />} allowedRoles={['Staff']} />} />
         <Route path="/my-profile" element={<ProtectedRoute element={<MyProfile />} allowedRoles={['Admin', 'Staff']} />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>

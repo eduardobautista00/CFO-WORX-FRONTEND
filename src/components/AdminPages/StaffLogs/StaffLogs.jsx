@@ -99,7 +99,7 @@ function StaffLogs() {
           imageWidth: 100,
           imageHeight: 100,
           confirmButtonText: 'OK',
-          confirmButtonColor: '#105652',
+          confirmButtonColor: '#050d42',
         });
       }
 
