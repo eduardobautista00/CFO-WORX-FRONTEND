@@ -1,5 +1,8 @@
 import React from "react";
 import users_list from "../../assets/images/accounts.png";
+import system_settings from "../../assets/images/system-settings.png";
+import consultant_management from "../../assets/images/consultant-management.png";
+import reports from "../../assets/images/reports.png";
 import client_management_icon from "../../assets/images/client-management-icon.png";
 import reviews_and_approvals_icon from "../../assets/images/reviews-and-approvals-icon.png";
 import dashboard_icon from "../../assets/images/dashboard-icon.png";
@@ -69,6 +72,19 @@ export const AdminSidebarData = [
     cName: "nav-text",
   },
   {
+    title: "Reports",
+    path: "/reports",
+    icon: (
+      <img
+        className="navIcon"
+        src={reports}
+        alt="Custom Icon"
+        style={{ width: "24px", height: "24px" }}
+      />
+    ),
+    cName: "nav-text",
+  },
+  {
     title: "Roles Management",
     path: "/user-management",
     icon: (
@@ -82,12 +98,25 @@ export const AdminSidebarData = [
     cName: "nav-text",
   },
   {
-    title: "Activity Log",
+    title: "Contaractor's Log",
     path: "/staff-logs",
     icon: (
       <img
         className="navIcon"
         src={staff_logs}
+        alt="Custom Icon"
+        style={{ width: "24px", height: "24px" }}
+      />
+    ),
+    cName: "nav-text",
+  },
+  {
+    title: "Consultant Management",
+    path: "/consultant-list",
+    icon: (
+      <img
+        className="navIcon"
+        src={consultant_management}
         alt="Custom Icon"
         style={{ width: "24px", height: "24px" }}
       />
@@ -147,18 +176,31 @@ export const AdminSidebarData = [
     cName: "nav-text",
   },
   {
-    title: "Resources",
-    path: "/resources-list",
+    title: "System Settings",
+    path: "/system-settings",
     icon: (
       <img
         className="navIcon"
-        src={upload_resources}
+        src={system_settings}
         alt="Custom Icon"
         style={{ width: "24px", height: "24px" }}
       />
     ),
     cName: "nav-text",
   },
+  // {
+  //   title: "Resources",
+  //   path: "/resources-list",
+  //   icon: (
+  //     <img
+  //       className="navIcon"
+  //       src={upload_resources}
+  //       alt="Custom Icon"
+  //       style={{ width: "24px", height: "24px" }}
+  //     />
+  //   ),
+  //   cName: "nav-text",
+  // },
   {
     title: "Logout",
     path: "/",
