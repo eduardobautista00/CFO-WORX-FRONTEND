@@ -5,7 +5,7 @@ import axios from 'axios';
 import {getCookie, setCookie} from './src/components/Authentication/getCookie'
 
 const axiosInstance = axios.create({
-    baseURL: 'https://dev.server.revivepharmacyportal.com.au/api',
+    baseURL: 'https://cfo-api.imseoninja.com/api',
 });
 
 let isRefreshing = false;

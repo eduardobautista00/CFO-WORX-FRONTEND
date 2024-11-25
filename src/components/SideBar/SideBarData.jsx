@@ -1,5 +1,8 @@
 import React from "react";
 import users_list from "../../assets/images/accounts.png";
+import client_management_icon from "../../assets/images/client-management-icon.png";
+import reviews_and_approvals_icon from "../../assets/images/reviews-and-approvals-icon.png";
+import dashboard_icon from "../../assets/images/dashboard-icon.png";
 import users_management from "../../assets/images/role-management.png";
 import staff_logs from "../../assets/images/staff_logs.png";
 import tickets_history from "../../assets/images/ticket-history.png";
@@ -13,6 +16,45 @@ import { FiChevronDown } from 'react-icons/fi'; // Importing the Chevron Down ic
 
 
 export const AdminSidebarData = [
+  {
+    title: "Dashboard",
+    path: "/dashboard",
+    icon: (
+      <img
+        className="navIcon"
+        src={dashboard_icon}
+        alt="Custom Icon"
+        style={{ width: "24px", height: "24px" }}
+      />
+    ),
+    cName: "nav-text",
+  },
+  {
+    title: "Reviews and Approvals",
+    path: "/reviews-and-approvals",
+    icon: (
+      <img
+        className="navIcon"
+        src={reviews_and_approvals_icon}
+        alt="Custom Icon"
+        style={{ width: "24px", height: "24px" }}
+      />
+    ),
+    cName: "nav-text",
+  },
+  {
+    title: "Client Management",
+    path: "/client-list",
+    icon: (
+      <img
+        className="navIcon"
+        src={client_management_icon}
+        alt="Custom Icon"
+        style={{ width: "24px", height: "24px" }}
+      />
+    ),
+    cName: "nav-text",
+  },
   {
     title: "Accounts",
     path: "/userlist",

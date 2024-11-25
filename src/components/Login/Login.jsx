@@ -2,15 +2,16 @@ import { useState, useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Login.css';
-import login_image_2 from '../../assets/images/login_image_2.png';
+import login_image_2 from '../../assets/images/cfo-fav-icon 1.png';
 import axiosInstance from '../../../axiosInstance.js';
 import Swal from 'sweetalert2'
 import close from "../../assets/images/close.png";
 
 function Login() {
     const [username, setUsername] = useState('');
+    const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [selectedRole, setSelectedRole] = useState('Staff');
+    const [selectedRole, setSelectedRole] = useState('Consultant');
     const [showPassword, setShowPassword] = useState(false);
     // const [branches, setBranches] = useState([]);
     // const [selectedBranch, setSelectedBranch] = useState('Main');
@@ -21,7 +22,7 @@ function Login() {
         event.preventDefault();
         try {
             const response = await axiosInstance.post('/login', {
-                username,
+                email,
                 password,
             });
 
@@ -120,9 +121,9 @@ function Login() {
     return (
         <div className="d-flex align-items-center justify-content-center custom-login">
             <div className="row">
-                <div className="col-md-6 d-flex flex-column align-items-center justify-content-center custom-col">
-                    <div className="header-title">
-                        <h1>Welcome to Revive <br/> Pharmacy Portal</h1>
+                <div className="col-md-6 d-flex flex-column align-items-center justify-content-center custom-col pr-5">
+                    <div className="header-title pr-5">
+                        <h1>Welcome to CFO<br/> WORX Portal</h1>
                         <br />
 
                     </div>
@@ -131,21 +132,21 @@ function Login() {
                     </div>
                 </div>
 
-                <div className="col-md-6 d-flex align-items-center justify-content-center">
+                <div className="col-md-6 d-flex align-items-center justify-content-center pl-5">
                     <div className="card p-4 login-form-wrap" style={{ width: '450px' }}>
-                        <h2 className="text-left mb-4">{selectedRole === 'Staff' ? 'Staff Login' : 'Admin Login'}</h2>
+                        <h2 className="text-left mb-4">{selectedRole === 'Consultant' ? 'Consultant Login' : 'Admin Login'}</h2>
                         {(error.value !== "" && error.isShow === true) && <div className="alert alert-danger">{error.value}<div className={"close-quick-alert"} onClick={()=>setError({...error , isShow:false})}></div></div>}
                         <form onSubmit={login}>
 
-                            <label htmlFor="username">Username</label><br />
+                            <label htmlFor="username">Email</label><br />
                             <div className="form-group mb-3 ">
                                 <input
                                     type="text"
                                     id="username"
                                     className="form-control-lg w-100 mb-2"
-                                    value={username}
+                                    value={email}
                                     // placeholder="Username"
-                                    onChange={(e) => setUsername(e.target.value)}
+                                    onChange={(e) => setEmail(e.target.value)}
                                 />
                                 
                             </div>
@@ -197,7 +198,7 @@ function Login() {
                                             onChange={(e) => setSelectedRole(e.target.value)}
                                         >
 
-                                            <option value="Staff">Staff</option>
+                                            <option value="Consultant">Consultant</option>
                                             <option value="Admin">Admin</option>
 
                                         </select>

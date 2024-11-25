@@ -73,7 +73,8 @@ input#username , input#password{
 }
 
 .custom-login .bg-image img {
-    width: 76%;
+    width: 100%;
+    padding-right: 50px;
 }
 
 .custom-login .bg-image {
@@ -153,6 +154,7 @@ form label{
 .header-title {
     color: #FFFFFF;
     text-align: center;
+    margin-right: 50px;
 }
 .form-group.group-field-password a.float-end {
     font-size: 14px;
