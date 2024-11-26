@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+.client-page-title{
+    margin-right: 48rem;
+    margin-bottom:10px;
+}
+
+.client-page-title h2{
+    font-weight: 700;
+    font-family: 'Inter',  sans-serif; 
+    color:#212A31;
+}
+  
+  .card-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+  }
+  
+  #client-card-header {
+    font-size: 0.8rem;
+    color: #FFF;
+  }
+  
+  .card-content {
+    display: flex;
+    align-items: center;
+  }
+  
+  #client-card h1 {
+    font-size: 5rem;
+    font-weight: 500;
+    margin-bottom: 50px;
+    color: #FFF; 
+  }
+
+  
+  .table-label{
+      margin-bottom: 15px;
+  }
+
+  .container-content h5 {
+    margin-bottom: -5px;
+    font-weight: bold;
+    color:#212A31; /* Bootstrap text-secondary */
+    font-family: 'Inter', sans-serif;
+  }
+  .container-content small{
+      color:rgba(33, 42, 49, 0.7);
+      font-style: italic;
+  }
+
+  .container-content {
+      margin-bottom: 1rem;
+  }
+
+  .top-filter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+  }
+  
+#search-bar, #filter {
+    margin-right: 34rem;
+    width: auto;
+    font-family: 'Inter', sans-serif;
+  }
+.table-section #search-bar{
+    margin: 0;
+}
+  .add-user-btn {
+    margin-left: auto;
+    background-color: #212A31;
+    font-family: 'Inter', sans-serif;
+  }
+  
+
+  .table-wrap {
+      border: 1px solid #212a3141;
+      padding: 2rem;
+      border-radius: 10px;
+
+  }
+  
+.sc-eUlrpB.hZZlND.dataTables_wrapper {
+ border-radius: 10px;
+ box-shadow: rgba(33, 42, 49, 0.4) 0px 0px 4px 1px;
+ font-family: 'Inter', sans-serif;
+}
+
+.dataTables_wrapper .rdt_TableHead .rdt_TableHeadRow{
+background-color: #FFF;
+border-bottom: .5px solid rgba(33, 42, 49, 0.1);
+display: flex;
+}
+
+  
+  /* Header above the card */
+  .container-content {
+    padding: 20px;
+  }
+  
+  /* Header above the card */
+  .client-activity-header h3 {
+    text-align: left;
+    margin-bottom: 20px;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  /* Flex container for card and table */
+  .flex-container {
+    display: flex;
+    gap: 20px; /* Space between card and table */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    margin-top: 20px;
+  }
+  
+  /* Card section */
+  .client-card {
+    width: 20rem;
+    height: 20rem;
+    padding: 5px;
+    background-color: #212A31;
+    font-family: 'Inter', sans-serif;
+    box-shadow: rgba(33, 42, 49, 0.4) 0px 4px 4px;
+    margin: 0 49rem 3rem 0;
+  }
+  .card-section {
+    flex: 1 1 30%; /* Card takes up 40% of available space */
+    min-width: 300px; /* Ensure card doesn't get too small */
+  }
+  
+  /* Table section */
+  .table-section {
+    flex: 1 1 65%; /* Table takes up more space */
+    min-width: 350px; /* Ensure table doesn't get too small */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Top filter styles */
+  .table-section .top-filter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .table-section .top-filter select,
+  .table-section .top-filter input {
+    width: 48%; /* Take up 48% of the width for both dropdown and search input */
+  }
+  
+  .table-section .top-filter input {
+    margin-left: 10px;
+  }
+  
+  .table-section .dataTables_wrapper {
+    width: 100%; /* Ensure the table takes up full width of its container */
+  }
+  
+  

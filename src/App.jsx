@@ -36,7 +36,8 @@ import ClientList from './components/AdminPages/ClientManagement/ClientList';
 import Reports from './components/AdminPages/Reports/Reports';
 import ConsultantList from './components/AdminPages/ConsultantManagement/ConsultantList';
 import SystemSettings from './components/AdminPages/SystemsSetting/SystemSettings';
-
+import SystemSettingsResetPassword from './components/AdminPages/SystemsSetting/SystemSettings-ResetPassword';
+import SystemSettingsSummaryEmail from './components/AdminPages/SystemsSetting/SystemSettings-SummaryEmail';
 
 
 
@@ -67,6 +68,8 @@ const  isSegmentCorrect = (url , pathNameURL) => {
         <Route path="/" element={<Login />} />
         <Route path="/userlist" element={<ProtectedRoute element={<UsersList />} allowedRoles={['Admin']} />} />
         <Route path="/system-settings" element={<ProtectedRoute element={<SystemSettings />} allowedRoles={['Admin']} />} />
+        <Route path="/system-settings_reset-password" element={<ProtectedRoute element={<SystemSettingsResetPassword />} allowedRoles={['Admin']} />} />
+        <Route path="/system-settings_summary-email" element={<ProtectedRoute element={<SystemSettingsSummaryEmail />} allowedRoles={['Admin']} />} />
         <Route path="/consultant-list" element={<ProtectedRoute element={<ConsultantList />} allowedRoles={['Admin']} />} />
         <Route path="/reports" element={<ProtectedRoute element={<Reports />} allowedRoles={['Admin']} />} />
         <Route path="/client-list" element={<ProtectedRoute element={<ClientList />} allowedRoles={['Admin']} />} />

@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+.dashboard-page-title{
+    margin-right: 53rem;
+    margin-bottom:15px;
+}
+
+.dashboard-page-title h1{
+    font-weight: 700;
+    font-family: 'Inter',  sans-serif; 
+    color:#212A31;
+}
+
+.dashboard-card {
+    width: 20rem;
+    height: 20rem;
+    padding: 5px;
+    background-color: #212A31;
+    font-family: 'Inter', sans-serif;
+    box-shadow: rgba(33, 42, 49, 0.4) 0px 4px 4px;
+    margin: 0 46rem 1rem 0;
+  }
+  
+  .dashboard-card-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+  }
+  
+  .dashboard-card-header small {
+    font-size: 0.8rem;
+    color: #6c757d;
+  }
+  
+  .dashboard-card-content {
+    display: flex;
+    align-items: center;
+  }
+  
+  .dashboard-card-content h1 {
+    font-size: 3.5rem;
+    font-weight: 400;
+    margin: 0 40px 0 5px;
+    color: #FFF; 
+  }
+
+  .dashboard-card-content small{
+      font-size: 1rem;
+      font-weight: lighter;
+  }
+  
+  .container-content h4 {
+    margin-bottom: 2rem;
+    font-weight: bold;
+    color:#212A31; /* Bootstrap text-secondary */
+    font-family: 'Inter', sans-serif;
+  }
+
+  #dashboard-container {
+      margin-bottom: 1rem;
+      box-shadow: rgba(33, 42, 49, 0.4) 2px 2px 4px 2px;
+      border-radius: 10px;
+      padding: 2rem;
+  }
+
+  
+.sc-eUlrpB.hZZlND.dataTables_wrapper {
+ border-radius: 10px;
+ box-shadow: rgba(33, 42, 49, 0.4) 0px 0px 4px 1px;
+ font-family: 'Inter', sans-serif;
+}
+
+.dataTables_wrapper .rdt_TableHead .rdt_TableHeadRow{
+background-color: #FFF;
+border-bottom: .5px solid rgba(33, 42, 49, 0.1);
+}

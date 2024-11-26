@@ -98,7 +98,7 @@ export const AdminSidebarData = [
     cName: "nav-text",
   },
   {
-    title: "Contaractor's Log",
+    title: "Contractor's Log",
     path: "/staff-logs",
     icon: (
       <img

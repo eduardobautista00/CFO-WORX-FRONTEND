@@ -63,7 +63,7 @@
     margin-right: 26px;
     cursor: pointer;
     width: 220px;
-    background-color: #050d42;
+    background-color: #212A31;
     padding: 10px 25px 10px 20px;
     border-radius: 5px;
     border: 1px solid #457a74;
@@ -113,7 +113,7 @@
 }
 @media (max-width: 768px) {
   .nav-menu {
-    background-color: #050d42;
+    background-color: #212A31;
     width: 250px;
     height: 100vh;
     display: flex;
@@ -134,7 +134,7 @@
     margin-right: 0px;
     cursor: pointer;
     width: 220px;
-    background-color: #050d42;
+    background-color: #212A31;
     padding: 10px 25px 10px 20px;
     border-radius: 5px;
     border: 1px solid #457a74;
@@ -216,7 +216,7 @@
 }
 @media (min-width: 768px) and (max-width: 1024px) {
   .nav-menu {
-    background-color: #050d42;
+    background-color: #212A31;
     width: 250px;
     height: 100vh;
     display: flex;
@@ -237,7 +237,7 @@
     margin-right: 0px;
     cursor: pointer;
     width: 220px;
-    background-color: #050d42;
+    background-color: #212A31;
     padding: 10px 25px 10px 20px;
     border-radius: 5px;
     border: 1px solid #457a74;
@@ -344,7 +344,7 @@ h1 {
 }
 
 .nav-menu {
-  background-color: #050d42;
+  background-color: #212A31;
   width: 250px;
   height: 100vh;
   display: flex;
@@ -412,13 +412,13 @@ h1 {
 }
 
 .sidebar-nav-list:hover {
-  background-color: #12194b;
+  background-color: rgba(217, 217, 217, 0.2);
   transition: background-color 0.2s ease-in-out;
   border-radius: 4px;
 }
 
 .sidebar-nav-list.active {
-  background-color: #12194b;
+  background-color: rgba(217, 217, 217, 0.2);
   border-radius: 4px;
 }
 
@@ -468,7 +468,7 @@ ul {
   margin-right: 74px;
   cursor: pointer;
   width: 240px;
-  background-color: #050d42;
+  background-color: #212A31;
   padding: 10px 25px 10px 20px;
   border-radius: 5px;
   border: 1px solid #457a74;
@@ -505,7 +505,7 @@ ul {
   right: 5px;
   position: fixed;
   top: 3rem;
-  background-color: #050d42;
+  background-color: #212A31;
 }
 
 .sticky-header-container {
@@ -523,7 +523,7 @@ ul {
 .time-display {
   color: #fff;
   font-size: 20px;
-  background-color: #161e5f;
+  background-color: #161e24;
   border-radius: 3px;
   padding: 15px 0 15px 0 !important;
   width: 200px;
