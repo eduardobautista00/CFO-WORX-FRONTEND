@@ -23,6 +23,12 @@
     font-size: 0.8rem;
     color: #FFF;
   }
+
+    
+  #client-card-header small {
+    font-size: 0.8rem;
+    color: #FFF;
+  }
   
   .card-content {
     display: flex;

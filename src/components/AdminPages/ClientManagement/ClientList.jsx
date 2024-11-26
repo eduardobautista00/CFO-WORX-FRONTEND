@@ -147,7 +147,7 @@ function ClientList() {
           <div className="card-section">
             <Card className="client-card">
               <div className="card-header" id="client-card-header">
-                <small>TOTAL NUMBER OF CLIENTS</small>
+                <small>TOTAL NUMBER OF CLIENTS:</small>
               </div>
              <Card.Body className="d-flex justify-content-center align-items-center" style={{ height: '200px' }}>
                 <div id="client-card">
