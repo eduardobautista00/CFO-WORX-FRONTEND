@@ -1,0 +1,56 @@
+.tables-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.generate-report-btn {
+  height: 48px;
+  width: 143px;
+  border-radius: 5px;
+  background-color: #212a31;
+  color: white;
+  border: none;
+  cursor: pointer;
+
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.start-date,
+.end-date {
+  display: flex;
+  flex-direction: column;
+}
+
+.start-date label,
+.end-date label {
+  text-transform: capitalize;
+}
+
+.date-container {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+.dropdown-container {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.info {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.info h5 {
+  font-weight: 600;
+}
+
+.info p {
+  font-size: 12px;
+  color: #a4a3aa;
+  font-weight: 600;
+}
