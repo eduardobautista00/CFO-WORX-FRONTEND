@@ -2,9 +2,13 @@ import React, { useState, useEffect } from "react";
 import DataTable from "react-data-table-component";
 import "../../../App.css";
 import "font-awesome/css/font-awesome.min.css";
-import view_icon from "../../../assets/images/view-details.png";
-import edit_icon from "../../../assets/images/edit-details.png";
-import delete_icon from "../../../assets/images/delete-log.png";
+// import view_icon from "../../../assets/images/view-details.png";
+// import edit_icon from "../../../assets/images/edit-details.png";
+// import delete_icon from "../../../assets/images/delete-log.png";
+import view_icon from "../../../assets/images/view-icon.png";
+import edit_icon from "../../../assets/images/edit-icon.png";
+import delete_icon from "../../../assets/images/reject-icon.png";
+
 import man from "../../../assets/images/man.png";
 import woman from "../../../assets/images/woman.png";
 import check from "../../../assets/images/check.png";
@@ -240,11 +244,12 @@ function UsersList() {
           />
 
           <div className="user-details">
-            <span>
-              {" "}
+            <span style={{ fontWeight: 600 }}>
               {row.first_name} {row.last_name}
             </span>
-            <span className="user-email-row">{row.email}</span>
+            <span className="user-email-row" style={{ fontWeight: 600 }}>
+              {row.email}
+            </span>
           </div>
         </div>
       ),
@@ -266,10 +271,10 @@ function UsersList() {
         row.branches?.map((r) => r.branch_name).join(", ") || "N/A",
       sortable: true,
       style: {
-        width: "200px", 
-        whiteSpace: "nowrap", 
+        width: "200px",
+        whiteSpace: "nowrap",
         overflow: "hidden",
-        textOverflow: "ellipsis", 
+        textOverflow: "ellipsis",
       },
     },
 
