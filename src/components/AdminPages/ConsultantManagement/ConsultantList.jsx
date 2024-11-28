@@ -1,8 +1,11 @@
 import React from "react";
 import DataTable from "react-data-table-component";
 import StickyHeader from "../../SideBar/StickyHeader";
+// import HeaderTest from "../../SideBar/HeaderTest";
 
 import "./ConsultantList.css";
+
+import { useNavigate } from "react-router-dom";
 
 import man from "../../../assets/images/man.png";
 import woman from "../../../assets/images/woman.png";
@@ -14,6 +17,8 @@ import dummyConsultants from "./dummyData";
 import dummyAlerts from "./dummyAlert";
 
 function ConsultantList() {
+  const navigate = useNavigate();
+
   const consultant_columns = [
     {
       name: "Name",
@@ -43,7 +48,7 @@ function ConsultantList() {
     },
     {
       name: "Email",
-      width: "20%",
+      width: "25%",
       selector: (row) =>
         <span style={{ fontWeight: 600 }}>{row.email}</span> || (
           <span style={{ fontWeight: 600 }}>N/A</span>
@@ -59,7 +64,7 @@ function ConsultantList() {
 
     {
       name: "Title",
-      width: "15%",
+      width: "20%",
       selector: (row) =>
         <span style={{ fontWeight: 600 }}>{row.title}</span> || (
           <span style={{ fontWeight: 600 }}>N/A</span>
@@ -67,23 +72,34 @@ function ConsultantList() {
       sortable: true,
     },
     {
-      name: "Hourly/Salary",
+      name: "Pay Type",
       width: "15%",
       selector: (row) =>
-        <span style={{ fontWeight: 600 }}>{row.compensation_type}</span> || (
+        <span style={{ fontWeight: 600 }}>{row.pay_type}</span> || (
           <span style={{ fontWeight: 600 }}>N/A</span>
         ),
       sortable: true,
     },
     {
-      name: "Bill Rate",
+      name: "Hire Date",
+      width: "20%",
+      selector: (row) =>
+        <span style={{ fontWeight: 600 }}>{row.hire_date}</span> || (
+          <span style={{ fontWeight: 600 }}>N/A</span>
+        ),
+      sortable: true,
+    },
+    {
+      name: "Status",
       width: "15%",
       selector: (row) => {
-        if (row.compensation_type === "Hourly") {
-          return <span style={{ fontWeight: 600 }}>${row.bill_rate}/hr</span>; // Format hourly rate
-        } else if (row.compensation_type === "Salary") {
+        if (row.status === "active") {
           return (
-            <span style={{ fontWeight: 600 }}>${row.bill_rate}/month</span>
+            <span style={{ fontWeight: 600, color: "#28A745" }}>Active</span>
+          );
+        } else if (row.pay_type === "inactive") {
+          return (
+            <span style={{ fontWeight: 600, color: "#DC3545" }}>Inactive</span>
           );
         }
         return "N/A";
@@ -102,6 +118,7 @@ function ConsultantList() {
             alt="edit"
             width="20"
             height="20"
+            onClick={() => navigate("/edit-consultant")}
             style={{ cursor: "pointer" }}
           />
 
@@ -270,7 +287,9 @@ function ConsultantList() {
         <h3 style={{ fontWeight: 700 }}>Consultant List</h3>
         <div className="btn-input-container">
           <input placeholder="Search Consultant" type="text" />
-          <button> + Add Consultant</button>
+          <button onClick={() => navigate("/add-consultant")}>
+            + Add Consultant
+          </button>
         </div>
         <DataTable
           className="dataTables_wrapper"
