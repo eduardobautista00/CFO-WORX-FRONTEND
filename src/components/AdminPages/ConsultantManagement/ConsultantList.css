@@ -4,6 +4,10 @@
   gap: 5rem;
 }
 
+.tables-container span {
+  margin: 0;
+}
+
 .btn-input-container {
   display: flex;
   justify-content: space-between;
@@ -20,7 +24,8 @@
   text-align: center;
 }
 
-.btn-input-container button {
+.btn-input-container button,
+.form-container button {
   height: 48px;
   width: 143px;
   border-radius: 5px;
@@ -28,4 +33,30 @@
   color: white;
   border: none;
   cursor: pointer;
+}
+
+.form-container {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-container label {
+  font-weight: 500;
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.form-container span {
+  display: flex;
+  flex-direction: column;
+}
+
+.sub-form-container {
+  display: flex;
 }
