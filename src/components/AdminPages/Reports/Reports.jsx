@@ -126,8 +126,8 @@ function Reports() {
         <div className="dropdown-container">
           <select>
             <option>Weekly</option>
+            <option>Bi-weekly</option>
             <option>Monthly</option>
-            <option>Quarterly</option>
           </select>
           <select>
             <option>Alex Johnson</option>
