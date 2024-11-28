@@ -21,8 +21,8 @@ export const dummyAlerts = [
     alert_message: "Submit Weekly Report",
   },
   {
-    id: 1,
-    consultant_id: 1,
+    id: 4,
+    consultant_id: 4,
     consultant_email: "emma.taylor@email.com",
     alert_days: "MTF",
     alert_message: "Submit Weekly Report",
