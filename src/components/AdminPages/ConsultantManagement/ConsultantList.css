@@ -60,3 +60,11 @@
 .sub-form-container {
   display: flex;
 }
+
+/* MODAAAAAAAAAL */
+
+.modal-container {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+}
