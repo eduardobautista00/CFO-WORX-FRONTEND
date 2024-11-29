@@ -6,9 +6,11 @@ export const reports = [
     expected_hours: 40,
     actual_hours_work: 38,
     total_hours_work: 38,
+    end_date: "2024-10-15",
     utilization: "95%",
     consultant_client: "Project Alpha",
     activity_type: "Development",
+    status: "pending",
   },
   {
     id: 2,
@@ -17,9 +19,11 @@ export const reports = [
     expected_hours: 40,
     actual_hours_work: 40,
     total_hours_work: 40,
+    end_date: "2024-10-15",
     utilization: "100%",
     consultant_client: "Project Alpha",
     activity_type: "Testing",
+    status: "pending",
   },
   {
     id: 3,
@@ -28,9 +32,11 @@ export const reports = [
     expected_hours: 40,
     actual_hours_work: 42,
     total_hours_work: 42,
+    end_date: "2024-10-15",
     utilization: "106%",
     consultant_client: "Project Alpha",
     activity_type: "Design",
+    status: "pending",
   },
   {
     id: 4,
@@ -39,9 +45,11 @@ export const reports = [
     expected_hours: 40,
     actual_hours_work: 40,
     total_hours_work: 40,
+    end_date: "2024-10-15",
     utilization: "100%",
     consultant_client: "Project Alpha",
     activity_type: "Meeting",
+    status: "pending",
   },
 ];
 
