@@ -54,3 +54,9 @@
   color: #a4a3aa;
   font-weight: 600;
 }
+
+.report-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
