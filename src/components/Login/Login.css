@@ -73,8 +73,8 @@ input#username , input#password{
 }
 
 .custom-login .bg-image img {
-    width: 100%;
-    padding-right: 50px;
+    width: 70%;
+    /* padding-right: 50px; */
 }
 
 .custom-login .bg-image {

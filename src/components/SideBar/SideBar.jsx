@@ -24,7 +24,7 @@ function Navbar({ role }) {
   const [currentTime, setCurrentTime] = useState("");
   const [openMenu, setOpenMenu] = useState(true);
   const [position, setPosition] = useState({ left: "5px" });
-  const isMobile = window.innerWidth <= 1024;
+  const isMobile = window.innerWidth > 0;
   const [dropdownOpenIndex, setDropdownOpenIndex] = useState(null);
 
   const handleDropdownToggle = (index) => {
@@ -141,24 +141,17 @@ function Navbar({ role }) {
       setActiveIndex(index);
       if (isMobile) {
         setOpenMenu(false);
-        setPosition((prevPosition) => ({
-          left: prevPosition.left === "190px" ? "5px" : "190px",
-        }));
       }
     }
   };
   return (
     <>
+      <div onClick={toggleMenu} className="toggle-btn">
+        <div className="bar"></div>
+        <div className="bar"></div>
+        <div className="bar"></div>
+      </div>
       <IconContext.Provider value={{ color: "#fff" }}>
-        <div
-          onClick={toggleMenu}
-          className="toggle-btn"
-          style={{ position: "fixed", left: position.left }}
-        >
-          <div className="bar"></div>
-          <div className="bar"></div>
-          <div className="bar"></div>
-        </div>
         <div className="sidebar-nav">
           {/* <div className="sticky-header">
             <div className="profile" onClick={() => navigate("/my-profile")}>
@@ -188,16 +181,20 @@ function Navbar({ role }) {
           {openMenu ? (
             <div>
               <nav className="nav-menu active">
-                <div className="logo">
+                {/* <div className="logo">
                   <div>
-                    <img  width="auto"
-                    height="50"
-                    viewBox="0 0 200 95" src={cfo_logo} alt="" />
+                    <img
+                      width="auto"
+                      height="50"
+                      viewBox="0 0 200 95"
+                      src={cfo_logo}
+                      alt=""
+                    />
                   </div>
                   <div className="time-display text-center p-2">
                     <p>{currentTime}</p>
                   </div>
-                </div>
+                </div> */}
 
                 {/* <div className="curve"></div> */}
                 <ul className="nav-menu-items p-4">

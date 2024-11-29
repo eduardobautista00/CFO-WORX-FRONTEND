@@ -50,6 +50,8 @@ button:hover {
   display: flex;
   align-items: center;
   flex-direction: column;
+  padding-left: 0;
+  padding-right: 0;
 }
 .generate-ticket-container .generate-ticket-sticky-header {
   margin-left: 0;
