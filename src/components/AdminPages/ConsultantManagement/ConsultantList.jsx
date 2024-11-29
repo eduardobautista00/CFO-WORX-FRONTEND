@@ -1,23 +1,50 @@
-import React from "react";
+import React, { useState } from "react";
 import DataTable from "react-data-table-component";
 import StickyHeader from "../../SideBar/StickyHeader";
 // import HeaderTest from "../../SideBar/HeaderTest";
 
 import "./ConsultantList.css";
 
-import { useNavigate } from "react-router-dom";
-
 import man from "../../../assets/images/man.png";
 import woman from "../../../assets/images/woman.png";
 
 import edit_icon from "../../../assets/images/edit-icon.png";
 import delete_icon from "../../../assets/images/reject-icon.png";
+import view_icon from "../../../assets/images/view-icon.png";
 
 import dummyConsultants from "./dummyData";
 import dummyAlerts from "./dummyAlert";
 
+import Modal from "../../Modal/Modal";
+
 function ConsultantList() {
-  const navigate = useNavigate();
+  const [viewModalData, setViewModalData] = useState(null);
+  const [editModalData, setEditModalData] = useState(null);
+  // const [addModalData, setAddModalData] = useState(null);
+
+  const [isViewModalOpen, setIsViewModalOpen] = useState(false);
+  const [isEditModalOpen, setIsEditModalOpen] = useState(false);
+  const [isAddModalOpen, setIsAddModalOpen] = useState(false);
+
+  const openViewModal = (data) => {
+    setViewModalData(data); // Set the row data (e.g., id and other details)
+    setIsViewModalOpen(true); // Open the modal
+  };
+
+  const openEditModal = (data) => {
+    setEditModalData(data); // Set the row data (e.g., id and other details)
+    setIsEditModalOpen(true); // Open the modal
+  };
+
+  const openAddModal = () => {
+    setIsAddModalOpen(true); // Open the modal
+  };
+
+  const closeAllModals = () => {
+    setIsViewModalOpen(false);
+    setIsEditModalOpen(false);
+    setIsAddModalOpen(false);
+  };
 
   const consultant_columns = [
     {
@@ -72,24 +99,6 @@ function ConsultantList() {
       sortable: true,
     },
     {
-      name: "Pay Type",
-      width: "15%",
-      selector: (row) =>
-        <span style={{ fontWeight: 600 }}>{row.pay_type}</span> || (
-          <span style={{ fontWeight: 600 }}>N/A</span>
-        ),
-      sortable: true,
-    },
-    {
-      name: "Hire Date",
-      width: "20%",
-      selector: (row) =>
-        <span style={{ fontWeight: 600 }}>{row.hire_date}</span> || (
-          <span style={{ fontWeight: 600 }}>N/A</span>
-        ),
-      sortable: true,
-    },
-    {
       name: "Status",
       width: "15%",
       selector: (row) => {
@@ -109,8 +118,18 @@ function ConsultantList() {
     {
       name: "Action",
       width: "15%",
-      selector: () => (
+      selector: (row) => (
         <div>
+          <img
+            className="ml-2"
+            src={view_icon}
+            title="View User Details"
+            alt="view"
+            width="20"
+            height="20"
+            onClick={() => openViewModal(row)}
+            style={{ cursor: "pointer" }}
+          />
           <img
             className="ml-2"
             src={edit_icon}
@@ -118,7 +137,7 @@ function ConsultantList() {
             alt="edit"
             width="20"
             height="20"
-            onClick={() => navigate("/edit-consultant")}
+            onClick={() => openEditModal(row)}
             style={{ cursor: "pointer" }}
           />
 
@@ -189,7 +208,7 @@ function ConsultantList() {
     {
       name: "Action",
       width: "10%",
-      selector: () => (
+      selector: (row) => (
         <div>
           <img
             className="ml-2"
@@ -198,6 +217,7 @@ function ConsultantList() {
             alt="edit"
             width="20"
             height="20"
+            onClick={() => openViewModal(row)}
             style={{ cursor: "pointer" }}
           />
 
@@ -282,14 +302,202 @@ function ConsultantList() {
     <div className="container tables-container">
       <StickyHeader />
 
+      {isViewModalOpen && viewModalData && (
+        <Modal isOpen={isViewModalOpen} onClose={closeAllModals}>
+          <h2 style={{ marginBottom: "2rem", textAlign: "center" }}>
+            View Consultant Details
+          </h2>
+          <div className="modal-container">
+            <div className="details-1">
+              <span>
+                Title:
+                <p style={{ fontWeight: 600 }}>{viewModalData.title}</p>
+              </span>
+
+              <span>
+                Name:
+                <p style={{ fontWeight: 600 }}>
+                  {viewModalData.first_name} {viewModalData.last_name}
+                </p>
+              </span>
+
+              <span>
+                Hire Date:
+                <p style={{ fontWeight: 600 }}> {viewModalData.hire_date}</p>
+              </span>
+              <span>
+                Pay Type:
+                <p style={{ fontWeight: 600 }}> {viewModalData.pay_type}</p>
+              </span>
+            </div>
+            <div>
+              <span>
+                Email:
+                <p style={{ fontWeight: 600 }}> {viewModalData.email}</p>
+              </span>
+
+              <span>
+                Phone: <p>{viewModalData.phone}</p>
+              </span>
+
+              {viewModalData.status === "active" ? (
+                <span>
+                  Status:
+                  <p style={{ fontWeight: 600, color: "#28A745" }}>Active</p>
+                </span>
+              ) : (
+                <span>
+                  <p style={{ fontWeight: 600, color: "#DC3545" }}>Inactive</p>
+                </span>
+              )}
+            </div>
+          </div>
+        </Modal>
+      )}
+
+      {isEditModalOpen && editModalData && (
+        <Modal isOpen={isEditModalOpen} onClose={closeAllModals}>
+          <h2 style={{ marginBottom: "2rem", textAlign: "center" }}>
+            View Consultant Details
+          </h2>
+          <form className="modal-container">
+            <div className="details-1">
+              <span>
+                <label htmlFor="title">Title:</label>
+                <br />
+                <input type="text" name="title" value={editModalData.title} />
+              </span>
+              <span>
+                <label htmlFor="first_name">First Name:</label>
+                <input
+                  type="text"
+                  name="first_name"
+                  value={editModalData.first_name}
+                />
+              </span>
+              <span>
+                <label htmlFor="last_name">Last Name:</label>
+                <input
+                  type="text"
+                  name="last_name"
+                  value={editModalData.last_name}
+                />
+              </span>
+
+              <span>
+                <label htmlFor="hire_date">Hire Date:</label>
+                <input
+                  type="text"
+                  name="hire_date"
+                  disabled
+                  value={editModalData.hire_date}
+                />
+              </span>
+              <span>
+                <label htmlFor="pay_type">Pay Type:</label>
+                <select name="pay_type">
+                  <option value="hourly" selected>
+                    Hourly
+                  </option>
+                  <option value="salary">Salary</option>
+                </select>
+              </span>
+            </div>
+            <div>
+              <span>
+                <label htmlFor="email">Email:</label>
+                <input type="text" value={editModalData.email} name="email" />
+              </span>
+
+              <span>
+                <label htmlFor="phone">Phone:</label>
+                <input type="text" name="phone" value={editModalData.phone} />
+              </span>
+
+              <span>
+                <label htmlFor="status">Status</label>
+                <select name="status">
+                  <option style={{ color: "#28A745" }} value="active" selected>
+                    Active
+                  </option>
+                  <option style={{ color: "#DC3545" }} value="inactive">
+                    Inactive
+                  </option>
+                </select>
+              </span>
+            </div>
+          </form>
+        </Modal>
+      )}
+
+      {isAddModalOpen && (
+        <Modal isOpen={isAddModalOpen} onClose={closeAllModals}>
+          <h2 style={{ marginBottom: "2rem", textAlign: "center" }}>
+            Add Consultant
+          </h2>
+          <form className="modal-container">
+            <div className="details-1">
+              <span>
+                <label htmlFor="title">Title:</label>
+                <br />
+                <input type="text" name="title" />
+              </span>
+              <span>
+                <label htmlFor="first_name">First Name:</label>
+                <input type="text" name="first_name" />
+              </span>
+              <span>
+                <label htmlFor="last_name">Last Name:</label>
+                <input type="text" name="last_name" />
+              </span>
+
+              <span>
+                <label htmlFor="hire_date">Hire Date:</label>
+                <input type="text" name="hire_date" disabled />
+              </span>
+              <span>
+                <label htmlFor="pay_type">Pay Type:</label>
+                <select name="pay_type">
+                  <option value="hourly" selected>
+                    Hourly
+                  </option>
+                  <option value="salary">Salary</option>
+                </select>
+              </span>
+            </div>
+            <div>
+              <span>
+                <label htmlFor="email">Email:</label>
+                <input type="text" name="email" />
+              </span>
+
+              <span>
+                <label htmlFor="phone">Phone:</label>
+                <input type="text" name="phone" />
+              </span>
+
+              <span>
+                <label htmlFor="status">Status</label>
+                <select name="status">
+                  <option style={{ color: "#28A745" }} value="active" selected>
+                    Active
+                  </option>
+                  <option style={{ color: "#DC3545" }} value="inactive">
+                    Inactive
+                  </option>
+                </select>
+              </span>
+            </div>
+          </form>
+        </Modal>
+      )}
+
       {/* Consultant List */}
       <div style={{ width: "90%" }}>
         <h3 style={{ fontWeight: 700 }}>Consultant List</h3>
         <div className="btn-input-container">
           <input placeholder="Search Consultant" type="text" />
-          <button onClick={() => navigate("/add-consultant")}>
-            + Add Consultant
-          </button>
+          <button onClick={openAddModal}>+ Add Consultant</button>
         </div>
         <DataTable
           className="dataTables_wrapper"
